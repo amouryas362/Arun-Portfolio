@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import logo from "../images/Daco_5121866.png"
-import avtar from "../images/man.jpeg"
-import colleghub from "../images/collegehub.png"
-import portfolio from "../images/portfolio.png"
-import bookstore from "../images/bookStore.png"
-import ed1 from "../images/manitlogo.png"
-import ed2 from "../images/davlogo.png"
+import React, { useState } from 'react';
+import logo from "../images/Daco_5121866.png";
+import avtar from "../images/man.jpeg";
+import colleghub from "../images/collegehub.png";
+import portfolio from "../images/portfolio.png";
+import bookstore from "../images/bookStore.png";
+import ed1 from "../images/manitlogo.png";
+import ed2 from "../images/davlogo.png";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +26,8 @@ const Home = () => {
       {/* Navbar */}
       <div className="bg-gray-800 text-white flex justify-between items-center p-4">
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-12" />
+          {/* <img src={logo} alt="Logo" className="h-12" /> */}
+          <div className='text-xl'>PORTFOLIO</div>
         </div>
 
         {/* Navbar Links */}
@@ -90,11 +91,11 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-slate-200 p-8 md:p-16 border-4 rounded-lg  border-slate-200 w-[1300px] mx-auto">
+      <section id="projects" className="bg-slate-200 p-8 md:p-16 border-4 rounded-lg  border-slate-200 mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Project Card 1 */}
-          <div className=" p-6 rounded-lg shadow-lg flex flex-col items-center   bg-slate-800 text-white">
+          {/* Project Cards */}
+          <div className=" p-6 rounded-lg shadow-lg flex flex-col items-center bg-slate-800 text-white">
             <div className="text-3xl font-semibold mb-4">College Hub</div>
             <div className="mb-4">A social media platform for college students to access news, notices, and groups. Built using React, Node.js, and PostgreSQL.</div>
             <div className="text-gray-400 mb-4">React.js, Node.js, Express.js, PostgreSQL</div>
@@ -102,16 +103,14 @@ const Home = () => {
             <img src={colleghub} alt="Project 1" className="mt-4 w-full h-[12rem] object-cover rounded-md" />
           </div>
 
-          {/* Project Card 2 */}
-          <div className=" p-6 rounded-lg shadow-lg flex flex-col items-center  bg-slate-800 text-white">
+          <div className=" p-6 rounded-lg shadow-lg flex flex-col items-center bg-slate-800 text-white">
             <div className="text-3xl font-semibold mb-4">Bookify</div>
-            <div className="mb-4">A book review platform where users can share and review their favorite books. Built with React and Express.js.</div>
+            <div className="mb-4">A book buying platform where users can buy and review their favorite books. Built with React and Express.js.</div>
             <div className="text-gray-400 mb-4">React.js, Express.js</div>
             <a href="https://github.com/amouryas362/Bookify" className="bg-pink-500 text-white px-6 py-2 rounded-md hover:bg-pink-600">Link</a>
             <img src={bookstore} alt="Project 2" className="mt-4 w-full h-[12rem]  object-cover rounded-md" />
           </div>
 
-          {/* Project Card 3 */}
           <div className=" bg-slate-800 text-white p-6 rounded-lg shadow-lg flex flex-col items-center">
             <div className="text-3xl font-semibold mb-4">Portfolio</div>
             <div className="mb-4">My personal portfolio showcasing my work and experience. Built with React.js and Tailwind CSS.</div>
@@ -127,58 +126,40 @@ const Home = () => {
         <h2 className="text-4xl font-bold text-center mb-8">Education Background</h2>
         <div className="flex flex-wrap justify-center gap-8">
           <div className="w-full sm:w-1/3 bg-white p-6 rounded-lg shadow-lg">
-            <img src={ed1} alt="University 1" className="w-[16rem] p-1 h-[15rem] mx-auto object-cover rounded-md mb-4 " />
+            <img src={ed1} alt="University 1" className="w-[16rem] p-1 h-[15rem] mx-auto object-cover rounded-md mb-4" />
             <h3 className="text-xl font-semibold">Maulana Azad National Institute of Technology, Bhopal</h3>
             <p className="text-gray-600">MCA (2022 - 2025) - Currently pursuing my Master's degree in Computer Applications.</p>
           </div>
           <div className="w-full sm:w-1/3 bg-white p-6 rounded-lg shadow-lg">
             <img src={ed2} alt="University 2" className="w-[16rem] p-1 h-[15rem] mx-auto object-cover rounded-md mb-4" />
-            <h3 className="text-xl font-semibold">DAV Centenary College</h3>
-            <p className="text-gray-600">BCA (2019 - 2021) - Completed my Bachelor's degree in Computer Applications with a focus on software development.</p>
+            <h3 className="text-xl font-semibold">DAV School, Bhopal</h3>
+            <p className="text-gray-600">Graduated in 2019 with 90% in my higher secondary education.</p>
           </div>
         </div>
       </section>
 
-      {/* Resume Download Section */}
-      <div className="p-8 md:p-16 flex justify-center items-center">
-        <a href="https://drive.google.com/file/d/1Bi2ybdZ6eyvXYfeeZKVJbaMO3vw45rgd/view?usp=sharing" target="_blank" className="bg-pink-500 text-white px-6 py-2 rounded-md hover:bg-pink-600">
-          Download Resume
-        </a>
-      </div>
-
-      {/* Contact Me Section */}
-      <section id="contactme" className="p-8 md:p-16 bg-gray-100 text-center">
-        <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
-        <form onSubmit={handleMessageSubmit} className="max-w-md mx-auto">
-          <input type="text" placeholder="Your Name" className="mb-4 p-3 w-full bg-white border rounded-md" required />
-          <input type="email" placeholder="Your Email" className="mb-4 p-3 w-full bg-white border rounded-md" required />
-          <textarea placeholder="Your Message" className="mb-4 p-3 w-full bg-white border rounded-md" required></textarea>
-          <button type="submit" className="bg-pink-500 text-white py-3 px-6 rounded-md hover:bg-pink-600 w-full">Send Message</button>
+      {/* Contact Section */}
+      <section id="contactme" className="bg-gray-300  p-8 md:p-16">
+        <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
+        <form onSubmit={handleMessageSubmit} className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <input type="text" className="w-full p-4 border-2 border-gray-500 rounded-md mb-4" placeholder="Your Name" required />
+          <input type="email" className="w-full p-4 border-2 border-gray-500 rounded-md mb-4" placeholder="Your Email" required />
+          <textarea className="w-full p-4 border-2 border-gray-500 rounded-md mb-4" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" className="w-full bg-pink-500 text-white py-2 rounded-md hover:bg-pink-600">
+            Send Message
+          </button>
         </form>
         {messageSent && (
-          <div className="mt-4 text-green-500 font-semibold">Your message has been sent successfully!</div>
+          <div className="text-center text-lg mt-4 text-green-500">Message Sent! I'll get back to you shortly.</div>
         )}
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white p-8 mt-16 text-center">
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="https://github.com/amouryas362" className="text-white hover:text-blue-500">
-            GitHub
-          </a>
-          <a href="mailto:amouryaw362@gmail.com" className="text-white hover:text-blue-500">
-            Email
-          </a>
-          <a href="tel:+7503931326" className="text-white hover:text-blue-500">
-            Contact
-          </a>
-        </div>
-        <div className="text-gray-400">
-          &copy; 2024 Arun Kumar Mourya. All rights reserved.
-        </div>
+      <footer className="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2023 Arun Kumar Mourya. All rights reserved.</p>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
