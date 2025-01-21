@@ -116,7 +116,7 @@ const Home = () => {
             <div className="text-3xl font-semibold mb-4">Portfolio</div>
             <div className="mb-4">My personal portfolio showcasing my work and experience. Built with React.js and Tailwind CSS.</div>
             <div className="text-gray-400 mb-4">React.js, Tailwind CSS</div>
-            <a href="#" className="bg-pink-500 text-white px-6 py-2 rounded-md hover:bg-pink-600">Link</a>
+            <a href="https://github.com/amouryas362/Arun-Portfolio" className="bg-pink-500 text-white px-6 py-2 rounded-md hover:bg-pink-600">Link</a>
             <img src={portfolio} alt="Project 3" className="mt-4 w-full h-[12rem] object-cover rounded-md" />
           </div>
         </div>
